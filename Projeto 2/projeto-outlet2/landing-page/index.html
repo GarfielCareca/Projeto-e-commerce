@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title href="/projeto-outlet2/landing-page/index.html"  >Projeto 1</title>
+</head>
+<body>
+<header>
+    <style>
+        .header{
+            background-color: #700c0c;
+            border-radius: 30px 30px 30px 30px;
+            padding: 10px;
+            margin: 10px;
+            height: 40px;
+            width: auto;
+            }
+        .titulo{
+            text-align: left;
+            padding-left: 50px;
+            margin-top: auto;
+            color: whitesmoke;
+        }
+        input{
+            padding: 10px;
+            border-radius: 30px 30px 30px 30px;
+            position: absolute; 
+            width: 350px; 
+            top: 20px;
+            margin-left: 300px;
+            text-align: center;
+            border-color: #700c0c;
+            outline: #700c0c;
+        }
+        ul{
+            list-style-type: none;
+            padding: -80px;
+            margin: 25px;
+            margin-left: 1005px;
+            display: flex;
+            width: auto;
+            color: whitesmoke;
+            font-size: large;
+        }
+        li{
+            color: whitesmoke;
+            padding: 30px;
+            position: relative; 
+            width: 600px;
+            text-align: right;
+            display: flex;
+        }
+        a{
+            color: whitesmoke;
+            text-decoration-color:currentColor;
+            text-decoration-style: solid;
+            text-decoration-line: none;
+            display: flex;
+        }
+        .linhabranca{
+            background-color: whitesmoke;
+            height: 1px;
+            width: 555px;
+            margin: -50px;
+            margin-left: 1075px;
+            box-sizing: auto;
+            display: flex;
+        }
+        
+    </style>
+    <div class="header" id="cabeçalho">
+        <H1 class="titulo">Título</H1>
+    <input class="pesquisa" type="text" id="inputBusca" placeholder="O que você está procurando?">
+    <div class="linhabranca" id="linhabranca"></div>
+<ul>
+    <li>
+    <a class="categoria1" href="/projeto-outlet2/categorias/Categoria1.html">categoria 1</a>
+    <a class="categoria2" href="/projeto-outlet2/categorias/Categoria2.html">categoria 2</a>
+    <a class="categoria3" href="/projeto-outlet2/categorias/Categoria3.html">categoria 3</a>
+    <a class="categoria4" href="/projeto-outlet2/categorias/Categoria4.html">categoria 4</a>
+    <a class="categoria5" href="/projeto-outlet2/categorias/Categoria5.html">categoria 5</a>
+    <a class="categoria6" href="/projeto-outlet2/categorias/Categoria6.html">categoria 6</a>
+    <a class="categoria7" href="/projeto-outlet2/categorias/Categoria7.html">categoria 7</a>
+    </li>
+</ul>
+
+</div>
+
+</header>
+<section>
+<main class="product">
+    <style>
+    .produtos-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas padrão */
+        gap: 30px;
+        padding: 40px;
+        justify-items: center;
+    }
+
+    /* Cartão de produto */
+    .cardproduto {
+        width: 100%;
+        max-width: 350px;
+        height: 500px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #fff;
+        color: black;
+        text-decoration: none;
+    }
+
+    .cardproduto img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-top: 10px;
+    }
+
+    /* Responsivo para telas médias (ex: tablets) */
+    @media (max-width: 1024px) {
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    }
+
+    /* Responsivo para telas pequenas (ex: celulares) */
+    @media (max-width: 600px) {
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+    }
+
+    </style>
+
+   <main class="product">
+  <div class="produtos-grid">
+    <a href="/projeto-outlet2/produtos/produto1.html" class="cardproduto">Manga
+      <img src="" alt="produto1">
+    </a>
+    <a href="/projeto-outlet2/produtos/produto2.html" class="cardproduto">Pera
+      <img src="inserir imagem" alt="produto2">
+    </a>
+    <a href="/projeto-outlet2/produtos/produto3.html" class="cardproduto">Abacaxi
+      <img src="inserir imagem" alt="produto3">
+    </a>
+    <a href="/projeto-outlet2/produtos/produto4.html" class="cardproduto">Pamonha
+      <img src="inserir imagem" alt="produto4">
+    </a>
+    <a href="/projeto-outlet2/produtos/produto5.html" class="cardproduto">Uva
+      <img src="inserir imagem" alt="produto5">
+    </a>
+    <a href="/projeto-outlet2/produtos/produto6.html" class="cardproduto">Melão
+      <img src="inserir imagem" alt="produto6">
+    </a>
+    <a href="/projeto-outlet2/produtos/produto7.html" class="cardproduto">Abobrinha
+      <img src="inserir imagem" alt="produto7">
+    </a>
+    <a href="/projeto-outlet2/produtos/produto8.html" class="cardproduto">Chuchu
+      <img src="inserir imagem" alt="produto8">
+    </a>
+  </div>
+</main>
+
+</main>
+
+<footer class="rodapé"></footer>
+<script>
+    document.getElementById("inputBusca").addEventListener("input", function () {
+  const termo = this.value.toLowerCase();
+  const produtos = document.querySelectorAll(".cardproduto");
+
+  let encontrou = false;
+
+  produtos.forEach(produto => {
+    const texto = produto.textContent.toLowerCase();
+
+    if (!encontrou && termo && texto.includes(termo)) {
+      produto.style.display = "block"; // mostra o primeiro compatível
+      encontrou = true;
+    } else if (!termo) {
+      produto.style.display = "block"; // mostra tudo se a busca estiver vazia
+    } else {
+      produto.style.display = "none"; // esconde os demais
+    }
+  });
+});
+
+</script>
+</body>
+</html>
