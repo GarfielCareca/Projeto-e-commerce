@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    /* Barra WhatsApp */
+    .barra-whatsapp {
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 0.95rem;
+    }
+
+    .barra-whatsapp a {
+      color: white;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    /* Header */
+    .header {
+      background-color: #700c0c;
+      border-radius: 0px;
+      padding: 20px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      max-height: 250px;
+      min-height: 50px;
+    }
+
+    .titulo {
+      color: whitesmoke;
+      font-size: 2rem;
+      align-self: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .pesquisa {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      width: 350px;
+      margin: 10px 0;
+      height: 50px;
+      margin-top: -50px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: whitesmoke;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .linhabranca {
+      width: 100%;
+      height: 2px;
+      background-color: whitesmoke;
+      margin-top: 10px;
+    }
+
+    /* Produto */
+    .produto-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .imagens {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .imagens img {
+      width: 80px;
+      height: 100px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .imagem-principal {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .detalhes-produto {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .detalhes-produto h1 {
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .preco {
+      font-size: 1.5rem;
+      color: #700c0c;
+    }
+
+    .antigo {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 1rem;
+    }
+
+    .tamanhos button,
+    .cores button {
+      padding: 8px 15px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .tamanhos button:hover,
+    .cores button:hover {
+      background-color: #eee;
+    }
+
+    .quantidade {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .quantidade input {
+      width: 40px;
+      text-align: center;
+    }
+
+    .botao-whatsapp {
+      background-color: #25D366;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .botao-whatsapp:hover {
+      background-color: #1ebe5a;
+    }
+
+    /* Descrição */
+    .descricao {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .descricao h2 {
+      margin-bottom: 10px;
+      color: #700c0c;
+    }
+
+    .descricao p {
+      margin-bottom: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #700c0c;
+      color: whitesmoke;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 20px 20px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Barra WhatsApp -->
+  <div class="barra-whatsapp">
+    📱 Agora você pode comprar pelo WhatsApp! 
+    <a href="https://wa.me/5599999999999" target="_blank">Fale com a gente!</a>
+  </div>
+
+   <!-- Header -->
+  <header class="header">
+    <h1 class="titulo">Título</h1>
+    <input class="pesquisa" type="text" id="inputBusca" placeholder="O que você está procurando?">
+
+    <nav>
+      <a href="/Projeto2/categorias/Categoria1.html">Categoria 1</a>
+      <a href="/Projeto2/categorias/Categoria2.html">Categoria 2</a>
+      <a href="/Projeto2/categorias/Categoria3.html">Categoria 3</a>
+      <a href="/Projeto2/categorias/Categoria4.html">Categoria 4</a>
+      <a href="/Projeto2/categorias/Categoria5.html">Categoria 5</a>
+      <a href="/Projeto2/categorias/Categoria6.html">Categoria 6</a>
+      <a href="/Projeto2/categorias/Categoria7.html">Categoria 7</a>
+    </nav>
+
+    <!-- Linha branca embaixo das categorias -->
+    <div class="linhabranca"></div>
+  </header>
+
+  <!-- Produto -->
+  <main class="produto-container">
+    <div class="imagens">
+      <img src="https://via.placeholder.com/80x100" alt="miniatura1">
+      <img src="https://via.placeholder.com/80x100" alt="miniatura2">
+      <img src="https://via.placeholder.com/80x100" alt="miniatura3">
+    </div>
+
+    <img class="imagem-principal" src="https://via.placeholder.com/400x500" alt="Produto">
+
+    <div class="detalhes-produto">
+      <h1>Nome do produto</h1>
+      <span class="preco">Preço</span>
+
+      <div class="tamanhos">
+        <strong>TAMANHO:</strong><br>
+        <button>P</button>
+        <button>M</button>
+        <button>G</button>
+        <button>GG</button>
+      </div>
+
+      <div class="cores">
+        <strong>COR:</strong><br>
+        <button>Azul</button>
+        <button>Vermelho</button>
+        <button>Verde</button>
+        <button>Amarelo</button>
+      </div>
+
+      <a class="botao-whatsapp" href="https://wa.me/5599999999999" target="_blank">
+        📲 Faça seu pedido pelo nosso WhatsApp
+      </a>
+    </div>
+  </main>
+
+  <!-- Descrição -->
+  <section class="descricao">
+    <h2>DESCRIÇÃO</h2>
+    <p>Aqui fica a descrição</p>
+
+    <h2>MEDIDAS</h2>
+    <p><strong>Informações adicionais:</strong></p>
+    <p>Composição: </p>
+    <p>Tamanhos disponíveis: </p>
+    <p>Outras Informações</p>
+    <br>
+    <p><strong>Medidas do Modelo:</strong></p>
+    <p>Veste:</p>
+    <p>Altura:</p>
+    <p>Quadril:</p>
+    <p>Busto:</p>
+    <p>Cintura:</p>
+    <br>
+    <p>Imagem ilustrativa</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 - Projeto Outlet
+  </footer>
+
+<script>
+  const inputBusca = document.querySelector(".pesquisa");
+
+  inputBusca.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      const termo = inputBusca.value.trim();
+      if (termo) {
+        window.location.href = "../landing-page/index.html?busca=" + encodeURIComponent(termo);
+      } else {
+        window.location.href = "../landing-page/index.html";
+      }
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
